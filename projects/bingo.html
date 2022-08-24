@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bingo</title>
+    <style>
+        body {font-family: 'Courier New', monospace;}
+        table {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);}
+        th, td {
+            background: pink;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;}
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+          <tr><th>B</th><th>I</th><th>N</th><th>G</th><th>O</th></tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    <script>
+        'use strict';
+        {
+        function createColumn(col) {
+            const source = [];
+            for (let i = 0; i < 15; i++) {
+                source[i] = i + 1 + 15 * col;}
+            const column = [];
+            for (let i = 0; i < 5; i++) {
+                column[i] = source.splice(Math.floor(Math.random() * source.length), 1)[0];}
+            return column;}
+
+        function createColumns() {
+            const columns = [];
+            for (let i = 0; i < 5; i++) {
+                columns[i] = createColumn(i);}
+            columns[2][2] = 'FREE';
+            return columns;}
+
+        function renderBingo(columns) {
+            for (let row = 0; row < 5; row++) {
+                const tr = document.createElement('tr');
+                for (let col = 0; col < 5; col++) {
+                    const td = document.createElement('td');
+                    td.textContent = columns[col][row];
+                    tr.appendChild(td);}
+                document.querySelector('tbody').appendChild(tr);}}
+
+        const columns = createColumns();
+        renderBingo(columns);
+        }
+    </script>
+</body>
+</html>

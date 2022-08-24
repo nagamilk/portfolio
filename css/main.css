@@ -1,0 +1,239 @@
+/*==================================================
+Table of Contents
+====================================================
+
+  1. Basic Style 
+  2. Header
+    2.1 Navbar
+    2.2 Banner
+  3. About me
+  4. Projects
+  5. Resume
+  6. Contact
+
+====================================================*/
+/*--------------------------------------------------*/
+/*	1. Basic Style 
+/*--------------------------------------------------*/
+@charset "utf-8";
+:root {
+  --main-color: coral;
+  --body-bg: #1c1d25;
+  --txt-color: #fff;
+  --gray: #ffffff;
+  --smooth: all 0.3s ease-in;}
+html {margin: 0; padding: 0;}
+body {font-family: "Poppins", sans-serif; margin: 0; font-size: 30px;}
+section {background-color: #fff;}
+nav {display: flex; justify-content: space-between; height: 25vh;}
+a  {text-decoration: none; color: var(--txt-color);}
+h1 {font-size: 90px; margin: 0;}
+h2 {font-size: 60px; margin: 0}
+h3 {font-size: 50px; font-weight: 500; margin: 0;}
+h4 {font-size: 40px; font-weight: 400;}
+p {font-size: 20px; margin: 0; font-weight: 300; }
+footer {background-color: var(--body-bg); color: var(--txt-color); text-align: center; padding: 50px;}
+
+/*---------------------------------------------------*/
+/*	2. Header
+/*---------------------------------------------------*/
+.header {
+  height: 100vh;
+  max-width: 100vw;
+  background-color: var(--body-bg);
+  color: var(--txt-color);}
+
+/* ---- 2.1 Navbar -------- */
+.header .navbar {height: 15vh; padding: 30px; display: flex;}
+.header .navbar .navbar__logo {width: 15%;}
+.header .navbar .navbar__logo img {width: auto; max-height: 100%;}
+.header .navbar .navbar__list {width: 85%; display: flex; align-items: center; justify-content: flex-end;}
+.header .navbar .navbar__list a:hover {color: var(--main-color);}
+.header .navbar .navbar__list ul {
+  margin: 0;
+  padding: 0;
+  display: flex;  
+  list-style-type: none; 
+  justify-content: flex-end; }
+.header .navbar .navbar__list li {text-decoration: none; margin-right: 30px; margin-left: 30px;}
+/* ---- 2.2 Banner -------- */
+.header .banner {
+  height: 85vh;
+  padding-left: 80px;
+  padding-right: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;}
+.header .banner .banner__content {margin-bottom: 100px;}
+.header .banner .banner__content p {font-size: 30px;}
+.header .banner .banner__content .mobile {display: none;}
+.header .banner .banner__content .banner__button {
+  display: inline-block;
+  border-radius: 30px;
+  background-color: var(--main-color);
+  padding: 7px 30px;
+  font-weight: 300;
+  font-size: 30px;
+  margin-top: 20px;
+  transition: ease .40s;}
+.header .banner .banner__content .banner__button:hover {transform: scale(1.05); }
+.header .banner .banner__socials {margin-bottom: 100px;}
+.header .banner .banner__socials a {font-size: 50px; display: block;}
+.header .banner .banner__socials a:hover {
+  color: var(--main-color); 
+  transform: scale(1.1); 
+  transition: .5s;}
+@media only screen and (max-width: 740px) {
+  .header .navbar {height: 10vh; padding: 20px 10px 20px 20px; justify-content: space-between;}
+  .header .navbar .navbar__list {display: none;}
+  .header .banner {display: block; padding: 100px 30px;}
+  .header .banner .banner__content {margin-bottom: 120px; text-align: center;}
+  .header .banner .banner__content h1 {font-size: 85px;}
+  .header .banner .banner__content .banner__button {margin-top: 50px;}
+  .header .banner .banner__content .mobile {display: block;}
+  .header .banner .banner__content .pc {display: none;}
+  .header .banner .banner__socials {margin: 0; display: flex; justify-content: space-evenly;}}
+
+/*---------------------------------------------------*/
+/*	3. About me
+/*---------------------------------------------------*/
+.aboutme {padding: 40px 80px;}
+.aboutme h2 {text-align: center; color: var(--body-bg);}
+.aboutme .aboutme___container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--body-bg);}
+/* Intro */
+.aboutme .aboutme___container .intro__text .text__mobile {display: none;}
+.aboutme .aboutme___container .intro__text {
+  border-radius: 10px;
+  padding: 30px;
+  background-color: rgba(255, 127, 80, 0.05);}
+.aboutme .aboutme___container .intro__text .text__pc p {padding: 5px 0px;}
+.aboutme .aboutme___container .intro___img img {width: 500px; margin-left: 30px;}
+/* Vision */
+.aboutme .aboutme___container .vision__text {
+  border-radius: 10px;
+  padding: 30px;
+  background-color: rgba(28, 29, 37, 0.04);}
+.aboutme .aboutme___container .vision__img img {width: 400px; margin-right: 50px;}
+.aboutme .aboutme___container .vision__text p {padding: 5px 0px;}
+@media only screen and (max-width: 740px) {
+  .aboutme {padding: 30px 15px;}
+  .aboutme h2 {font-size: 40px;}
+  .aboutme .aboutme___container {flex-direction: column-reverse;}
+  .aboutme .aboutme___container .intro__text {padding: 20px;}
+  .aboutme .aboutme___container .intro__text .text__pc {display: none;}
+  .aboutme .aboutme___container .intro__text .text__mobile {display: block;}
+  .aboutme .aboutme___container .intro___img img {width: 100%; max-height: 100%; margin: 0;}
+  .aboutme .aboutme___container .vision__img {display: none;}
+  .aboutme .aboutme___container .vision__text {display: none;}}
+
+/*---------------------------------------------------*/
+/*	4. Projects
+/*---------------------------------------------------*/
+.project {background-color: var(--body-bg); padding: 40px 80px; text-align: center;}
+.project h2 {margin-bottom: 30px; color: var(--txt-color);}
+.project .project__container {max-width: 100vw; display: flex; justify-content: space-between;}
+.project .project__container .project__image {width: 375px; margin-bottom: 20px; position: relative;}
+.project .project__container .project__image .image__img {
+  width: 100%;
+  max-height: 100%;
+  display: block;
+  border-radius: 5px;}
+.project .project__container .project__image .image__overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background: rgba(255, 127, 80, 0.8);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;}
+.project .project__container .project__image .image__overlay p {font-weight: 700;}
+.project .project__container .project__image .image__overlay > * {
+  transform: translateY(10px);
+  transition: transform 0.4s;}
+.project .project__container .project__image .image__overlay:hover {opacity: 1;}
+.project .project__container .project__image .image__overlay:hover > * {transform: translateY(0);}
+@media only screen and (max-width: 740px) {
+  .project {padding: 30px 20px;}
+  .project h2 {font-size: 40px;}
+  .project .project__container {flex-direction: column; align-items: center;}
+  .project .project__container .project__image {width: auto;}}
+
+/*---------------------------------------------------*/
+/*	5. Resume
+/*---------------------------------------------------*/
+.resume {padding: 40px 80px; font-size: 25px;}
+.resume h2 {text-align: center;}
+.resume h3 {text-align: center; padding: 0;}
+.resume h4 {font-size: 25px;}
+.resume .resume__container {max-width: 100vw; display: flex; justify-content: space-between;}
+.resume .resume__container .resume__items {width: 570px;}
+.resume .resume__container .resume__items ul {padding: 0; list-style-type: none;}
+.resume .resume__container .resume__items ul li {
+  background-color: rgba(255, 127, 80, 0.05);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 30px;
+  max-width: 100%;
+  float: left;}
+.resume .resume__container .resume__items ul li:last-child {margin-bottom: 0px;}
+.resume .resume__container .resume__items ul li .list_inner {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+  position: relative;}
+.text p {font-size: 20px;}
+.resume .resume__container .resume__items ul li .short {
+  width: 100%;
+  margin-bottom: 10px;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;}
+.resume .resume__container .resume__items ul li .short .job {padding-right: 20px;}
+.resume .resume__container .resume__items ul li .short .job h4 {
+  font-weight: 700;
+  color: var(--main-color);
+  margin-top: 20px;
+  margin-bottom: 8px;}
+.resume .resume__container .resume__items ul li .short .job span {font-size: 15px; color: #555;}
+.resume .resume__container .resume__items ul li .year span {
+  font-size: 15px;
+  color: var(--body-bg);
+  display: inline-block;
+  border: 1px solid #dddddd;
+  border-radius: 50px;
+  padding: 8px 35px 7px 35px;
+  white-space: nowrap;}
+.resume .resume__container .resume__items .experience__list li {background-color: rgba(28, 29, 37, 0.04);}
+@media only screen and (max-width: 740px) {
+  .resume {padding: 30px 20px;}
+  .resume h2 {font-size: 40px;}
+  .resume h3 {font-size: 25px;}
+  .resume h4 {font-size: 20px;}
+  .resume .resume__container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;}
+  .resume .resume__container .resume__items {width: auto;}
+  .resume .resume__container .resume__items ul li .short {
+    flex-direction: column-reverse;
+    align-items: normal;}}
+
+/*---------------------------------------------------*/
+/*	6. Contact me
+/*---------------------------------------------------*/
+@media only screen and (max-width: 740px) {
+  #contact h2 {font-size: 40px;}}
