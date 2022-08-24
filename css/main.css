@@ -86,7 +86,7 @@ footer {background-color: var(--body-bg); color: var(--txt-color); text-align: c
 @media only screen and (max-width: 740px) {
   .header .navbar {height: 10vh; padding: 20px 10px 20px 20px; justify-content: space-between;}
   .header .navbar .navbar__list {display: none;}
-  .header .banner {display: block; padding: 100px 30px;}
+  .header .banner {display: block; padding: 50px 30px;}
   .header .banner .banner__content {margin-bottom: 120px; text-align: center;}
   .header .banner .banner__content h1 {font-size: 85px;}
   .header .banner .banner__content .banner__button {margin-top: 50px;}
